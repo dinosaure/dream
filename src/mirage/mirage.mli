@@ -186,7 +186,7 @@ module Make
        ?stop:Lwt_switch.t
     -> port:int
     -> ?prefix:string
-    -> Stack.TCP.t
+    -> Stack.t
     -> ?cfg:Tls.Config.server
     -> ?error_handler:error_handler
     -> handler
@@ -197,7 +197,7 @@ module Make
     -> port:int
     -> ?prefix:string
     -> ?protocol:[ `H2 | `HTTP_1_1 ]
-    -> Stack.TCP.t
+    -> Stack.t
     -> ?error_handler:error_handler
     -> handler
     -> unit Lwt.t
